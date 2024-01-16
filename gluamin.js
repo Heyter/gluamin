@@ -17,7 +17,7 @@
 
 	/*--------------------------------------------------------------------------*/
 
-	var luaparse = root.luaparse || require('luaparse');
+	var luaparse = root.luaparse || require('gluaparse');
 	luaparse.defaultOptions.comments = false;
 	luaparse.defaultOptions.scope = true;
 	var parse = luaparse.parse;
@@ -649,8 +649,8 @@
 
 	/*--------------------------------------------------------------------------*/
 
-	var luamin = {
-		'version': '1.0.4',
+	var gluamin = {
+		'version': '1.0.0',
 		'minify': minify
 	};
 
@@ -662,16 +662,16 @@
 		define.amd
 	) {
 		define(function() {
-			return luamin;
+			return gluamin;
 		});
 	}	else if (freeExports && !freeExports.nodeType) {
 		if (freeModule) { // in Node.js or RingoJS v0.8.0+
-			freeModule.exports = luamin;
+			freeModule.exports = gluamin;
 		} else { // in Narwhal or RingoJS v0.7.0-
-			extend(freeExports, luamin);
+			extend(freeExports, gluamin);
 		}
 	} else { // in Rhino or a web browser
-		root.luamin = luamin;
+		root.gluamin = gluamin;
 	}
 
 }(this));

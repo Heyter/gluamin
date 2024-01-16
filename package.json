@@ -1,10 +1,9 @@
 {
-	"name": "luamin",
-	"version": "1.0.4",
+	"name": "gluamin",
+	"version": "1.0.0",
 	"description": "A Lua minifier written in JavaScript",
-	"homepage": "https://mths.be/luamin",
-	"main": "luamin.js",
-	"bin": "bin/luamin",
+	"homepage": "https://github.com/Heyter/gluamin",
+	"main": "dist/gluamin.js",
 	"keywords": [
 		"lua",
 		"minify",
@@ -22,27 +21,13 @@
 	"bugs": "https://github.com/mathiasbynens/luamin/issues",
 	"files": [
 		"LICENSE-MIT.txt",
-		"luamin.js",
-		"bin/",
-		"man/"
+		"gluamin.js"
 	],
-	"directories": {
-		"bin": "bin",
-		"man": "man",
-		"test": "tests"
-	},
 	"scripts": {
-		"test": "node tests/tests.js"
+		"build": "esbuild gluamin.js --bundle --platform=node --outfile=dist/gluamin.js"
 	},
 	"dependencies": {
-		"luaparse": "^0.2.1"
-	},
-	"devDependencies": {
-		"grunt": "^0.4.4",
-		"grunt-shell": "^1.1.2",
-		"istanbul": "^0.4.2",
-		"qunit-extras": "^1.4.5",
-		"qunitjs": "~1.11.0",
-		"requirejs": "^2.1.22"
+		"esbuild": "^0.19.11",
+		"gluaparse": "git+https://github.com/WilliamVenner/glua.js.git"
 	}
 }
