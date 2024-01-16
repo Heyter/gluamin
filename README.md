@@ -15,7 +15,7 @@ var luaCode = 'a = ((1 + 2) - 3) * (4 / (5 ^ 6)) -- foo';
 luamin.minify(luaCode); // 'a=(1+2-3)*4/5^6'
 
 // `minify` also accepts luaparse-compatible ASTs as its argument:
-var ast = luaparse.parse(luaCode, { 'scope': true });
+var ast = gluaparse.parse(luaCode, { 'scope': true });
 luamin.minify(ast); // 'a=(1+2-3)*4/5^6'
 ```
 
