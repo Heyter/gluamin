@@ -1,6 +1,4 @@
-# luamin, a Lua minifier written in JavaScript
-
-[![Build status](https://travis-ci.org/mathiasbynens/luamin.svg?branch=master)](https://travis-ci.org/mathiasbynens/luamin)
+# gluamin, a Lua minifier written in JavaScript
 
 luamin uses the excellent [gluaparse](https://github.com/everyday-as/glua.js) library to parse Lua code into an Abstract Syntax Tree. Based on that AST, luamin then generates a (hopefully) more compact yet semantically equivalent Lua program. [Here’s an online demo.](https://mothereff.in/lua-minifier)
 
