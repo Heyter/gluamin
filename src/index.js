@@ -611,6 +611,10 @@
 			// The identifier names in a `GotoStatement` can safely be renamed
 			result = 'goto ' + generateIdentifier(statement.label.name);
 
+		} else if (statementType == 'ContinueStatement') {
+
+			result = 'continue';
+
 		} else {
 
 			throw TypeError('Unknown statement type: `' + statementType + '`');
