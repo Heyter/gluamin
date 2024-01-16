@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "A Lua minifier written in JavaScript",
 	"homepage": "https://github.com/Heyter/gluamin",
-	"main": "dist/gluamin.js",
+	"main": "dist/index.js",
 	"keywords": [
 		"lua",
 		"minify",
@@ -24,10 +24,16 @@
 		"gluamin.js"
 	],
 	"scripts": {
-		"build": "esbuild gluamin.js --bundle --platform=node --outfile=dist/gluamin.js"
+		"build": "esbuild ./src/index.js --bundle --platform=node --outfile=dist/index.js",
+		"prepare": "npm run build"
 	},
 	"dependencies": {
-		"esbuild": "^0.19.11",
 		"gluaparse": "git+https://github.com/WilliamVenner/glua.js.git"
+	},
+	"devDependencies": {
+		"esbuild": "^0.19.11"
+	},
+	"engines": {
+		"node": ">=8.0.0"
 	}
 }
